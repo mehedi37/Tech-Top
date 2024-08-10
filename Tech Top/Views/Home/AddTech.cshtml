@@ -1,0 +1,33 @@
+﻿@model TechModel
+@{
+    ViewData["Title"] = "Add New Tech";
+}
+<h1>
+    <i class="bi bi-plus-circle-fill text-primary"></i>
+    Add New Tech
+</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="TechName"></label>
+        <input asp-for="TechName" class="form-control" />
+        <span asp-validation-for="TechName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form-control" />
+        <span asp-validation-for="Image" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ReleaseDate"></label>
+        <input asp-for="ReleaseDate" type="date" class="form-control" />
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Add Tech</button>
+</form>
+
